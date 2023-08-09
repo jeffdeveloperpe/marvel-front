@@ -1,35 +1,35 @@
 <p-tabView styleClass="tabview-custom">
     <p-tabPanel>
         <ng-template pTemplate="header">
-            <i class="pi pi-calendar"></i>
+            <i class="pi pi-info-circle"></i>
             <span>Información</span>
         </ng-template>
         <app-tab-information [character]="character"></app-tab-information>
     </p-tabPanel>
     <p-tabPanel>
         <ng-template pTemplate="header">
-            <i class="pi pi-user"></i>
+            <i class="pi pi-book"></i>
             <span>Comics</span>
         </ng-template>
         <app-tab-comic [character]="character"></app-tab-comic>
     </p-tabPanel>
     <p-tabPanel>
         <ng-template pTemplate="header">
-            <i class="pi pi-search"></i>
+            <i class="pi pi-star"></i>
             <span>Series</span>
         </ng-template>
       <app-tab-serie [character]="character"></app-tab-serie>
     </p-tabPanel>
   <p-tabPanel>
         <ng-template pTemplate="header">
-            <i class="pi pi-search"></i>
+            <i class="pi pi-images"></i>
             <span>Stories</span>
         </ng-template>
       <app-tab-story [character]="character"></app-tab-story>
     </p-tabPanel>
   <p-tabPanel>
         <ng-template pTemplate="header">
-            <i class="pi pi-search"></i>
+            <i class="pi pi-clock"></i>
             <span>Events</span>
         </ng-template>
       <app-tab-event [character]="character"></app-tab-event>
