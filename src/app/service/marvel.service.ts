@@ -13,4 +13,9 @@ export class MarvelService {
     const url = 'http://localhost:8080/api/v1/marvel/characters?offset=' + offset
     return this.http.get<MarvelResponse>(url)
   }
+
+  public get(id: number): Observable<MarvelResponse> {
+    const url = 'http://localhost:8080/api/v1/marvel/characters/' + id
+    return this.http.get<MarvelResponse>(url)
+  }
 }

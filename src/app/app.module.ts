@@ -13,11 +13,18 @@ import {CardModule} from "primeng/card";
 import {MarvelService} from "./service/marvel.service";
 import {HttpClientModule} from "@angular/common/http";
 import {ScrollTopModule} from "primeng/scrolltop";
+import { CharacterDetailComponent } from './character-detail/character-detail.component';
+import {DynamicDialogModule} from "primeng/dynamicdialog";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { TabInformationComponent } from './tabs/tab-information/tab-information.component';
+import {ButtonModule} from "primeng/button";
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharactersComponent
+    CharactersComponent,
+    CharacterDetailComponent,
+    TabInformationComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,10 @@ import {ScrollTopModule} from "primeng/scrolltop";
     PaginatorModule,
     CardModule,
     HttpClientModule,
-    ScrollTopModule
+    ScrollTopModule,
+    DynamicDialogModule,
+    BrowserAnimationsModule,
+    ButtonModule
   ],
   providers: [MarvelService],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+<p-card *ngIf="character" [header]="character!.name" [subheader]="'ID: ' + character!.id" [style]="{ width: '100%' }">
+    <ng-template pTemplate="header">
+        <img alt="character"
+             [src]="character!.thumbnail.path + '.' + character!.thumbnail!.extension!"
+             style="height: 600px;"/>
+    </ng-template>
+    <p>
+        {{character!.description}}
+    </p>
+    <ng-template pTemplate="footer">
+      <p><b>Última fecha actualización:</b></p>
+      <label>{{character!.modified | date:'dd-MM-yyyy HH:mm:ss':'+0000'}}</label>
+    </ng-template>
+</p-card>
