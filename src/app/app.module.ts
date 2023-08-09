@@ -18,13 +18,16 @@ import {DynamicDialogModule} from "primeng/dynamicdialog";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { TabInformationComponent } from './tabs/tab-information/tab-information.component';
 import {ButtonModule} from "primeng/button";
+import { TabComicComponent } from './tabs/tab-comic/tab-comic.component';
+import {TableModule} from "primeng/table";
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
     CharacterDetailComponent,
-    TabInformationComponent
+    TabInformationComponent,
+    TabComicComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import {ButtonModule} from "primeng/button";
     ScrollTopModule,
     DynamicDialogModule,
     BrowserAnimationsModule,
-    ButtonModule
+    ButtonModule,
+    TableModule
   ],
   providers: [MarvelService],
   bootstrap: [AppComponent]
