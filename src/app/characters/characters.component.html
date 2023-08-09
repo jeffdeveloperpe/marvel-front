@@ -1,0 +1,27 @@
+<div class="card">
+    <p-dataView #dv [value]="results" [layout]="layout"
+                [rows]="limit"
+                [lazy]="true"
+                [paginator]="true"
+                [totalRecords]="total" (onLazyLoad)="onLazyLoad($event)">
+        <ng-template let-product pTemplate="gridItem">
+            <div class="col-12 sm:col-6 lg:col-12 xl:col-4 p-2">
+                <div class="p-4 border-1 surface-border surface-card border-round">
+                    <div class="flex flex-wrap align-items-center justify-content-between gap-2">
+                        <span class="flex align-items-center gap-2">
+                            <img src="assets/marvel-logo.png" style="width: 80px; height: 40px;">
+                        </span>
+                    </div>
+                    <div class="flex flex-column align-items-center gap-3 py-5">
+                        <img class="w-9 shadow-2 border-round"
+                             [src]="product.thumbnail.path + '.' + product.thumbnail.extension"
+                             [alt]="product.name"
+                             (click)="onClickItem(product)"/>
+                        <div class="text-2xl font-bold"
+                             (click)="onClickItem(product)">{{ product.name }}</div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataView>
+</div>
