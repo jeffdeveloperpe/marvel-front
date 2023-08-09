@@ -22,6 +22,8 @@ import { TabComicComponent } from './tabs/tab-comic/tab-comic.component';
 import {TableModule} from "primeng/table";
 import { TabSerieComponent } from './tabs/tab-serie/tab-serie.component';
 import { TabStoryComponent } from './tabs/tab-story/tab-story.component';
+import { TabEventComponent } from './tabs/tab-event/tab-event.component';
+import { CharacterItemComponent } from './character-item/character-item.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { TabStoryComponent } from './tabs/tab-story/tab-story.component';
     TabInformationComponent,
     TabComicComponent,
     TabSerieComponent,
-    TabStoryComponent
+    TabStoryComponent,
+    TabEventComponent,
+    CharacterItemComponent
   ],
   imports: [
     BrowserModule,

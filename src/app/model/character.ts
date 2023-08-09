@@ -3,6 +3,7 @@ import {Resource} from "./resource";
 
 export interface Character {
   id: number
+  title: string
   name: string
   description: string
   modified: string

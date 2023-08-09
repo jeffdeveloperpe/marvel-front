@@ -57,9 +57,7 @@ export class CharactersComponent implements OnInit {
   }
 
   onLazyLoad(value: any): void {
-    console.log('first: ' + value.first)
     this.offset = value.first
-    console.log('nuevo valor de offset: ' + this.offset)
     this.list()
   }
 }

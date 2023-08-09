@@ -1,13 +1,16 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Character} from "../../model/character";
-import {CharacterItemComponent} from "../../character-item/character-item.component";
+import {MarvelService} from "../../service/marvel.service";
 import {DialogService, DynamicDialogRef} from "primeng/dynamicdialog";
+import {CharacterDetailComponent} from "../../character-detail/character-detail.component";
+import {CharacterItemComponent} from "../../character-item/character-item.component";
 
 @Component({
-  selector: 'app-tab-comic',
-  templateUrl: './tab-comic.component.html'
+  selector: 'app-tab-event',
+  templateUrl: './tab-event.component.html',
+  providers: [DialogService]
 })
-export class TabComicComponent implements OnInit {
+export class TabEventComponent implements OnInit {
 
   @Input() character?: Character
 
@@ -25,11 +28,11 @@ export class TabComicComponent implements OnInit {
     const value = resourceURI.split('/')
 
     this.ref = this.dialogService.open(CharacterItemComponent, {
-      header: 'Detalle de Comic',
+      header: 'Detalle de Evento',
       width: '70%',
       data: {
         id: value[value.length - 1],
-        type: 'comic'
+        type: 'event'
       }
     })
   }
