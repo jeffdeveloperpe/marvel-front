@@ -6,22 +6,18 @@
         </ng-template>
         <app-tab-information [character]="character"></app-tab-information>
     </p-tabPanel>
-    <p-tabPanel header="Header II">
+    <p-tabPanel>
         <ng-template pTemplate="header">
             <i class="pi pi-user"></i>
             <span>Comics</span>
         </ng-template>
         <app-tab-comic [character]="character"></app-tab-comic>
     </p-tabPanel>
-    <p-tabPanel header="Header III">
+    <p-tabPanel>
         <ng-template pTemplate="header">
             <i class="pi pi-search"></i>
-            <span>Header III</span>
-            <i class="pi pi-cog"></i>
+            <span>Series</span>
         </ng-template>
-        <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
-            qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
-        </p>
+      <app-tab-serie [character]="character"></app-tab-serie>
     </p-tabPanel>
 </p-tabView>
