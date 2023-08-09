@@ -1,0 +1,13 @@
+<div class="login-container">
+  <img src="assets/marvel-logo.png" alt="Logo">
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <input pInputText id="email"
+         placeholder="Usuario"
+         formControlName="fcEmail"/>
+    <input pPassword id="password"
+         placeholder="Contraseña"
+         [showPassword]="false"
+         formControlName="fcPassword"/>
+    <button pButton pRipple label="INGRESAR" class="w-full mb-4" type="submit"></button>
+  </form>
+</div>

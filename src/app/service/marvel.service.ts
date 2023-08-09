@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {MarvelResponse} from "../model/marvel-response";
 
@@ -10,18 +10,36 @@ export class MarvelService {
   }
 
   public list(offset: number = 0): Observable<MarvelResponse> {
+    const headerDict = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': 'Basic ' + window.btoa('admin' + ':' + 'admin')
+    }
+
     const url = 'http://localhost:8080/api/v1/marvel/characters?offset=' + offset
-    return this.http.get<MarvelResponse>(url)
+    return this.http.get<MarvelResponse>(url, {headers: new HttpHeaders(headerDict)})
   }
 
   public get(id: number): Observable<MarvelResponse> {
+    const headerDict = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': 'Basic ' + window.btoa('admin' + ':' + 'admin')
+    }
+
     const url = 'http://localhost:8080/api/v1/marvel/characters/' + id
-    return this.http.get<MarvelResponse>(url)
+    return this.http.get<MarvelResponse>(url, {headers: new HttpHeaders(headerDict)})
   }
 
   public getItem(id: number, type: string): Observable<MarvelResponse> {
+    const headerDict = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': 'Basic ' + window.btoa('admin' + ':' + 'admin')
+    }
+
     const url = this.getUrl(type) + id
-    return this.http.get<MarvelResponse>(url)
+    return this.http.get<MarvelResponse>(url, {headers: new HttpHeaders(headerDict)})
   }
 
   private getUrl(type: string) {
