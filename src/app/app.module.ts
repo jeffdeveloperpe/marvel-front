@@ -24,6 +24,8 @@ import { TabSerieComponent } from './tabs/tab-serie/tab-serie.component';
 import { TabStoryComponent } from './tabs/tab-story/tab-story.component';
 import { TabEventComponent } from './tabs/tab-event/tab-event.component';
 import { CharacterItemComponent } from './character-item/character-item.component';
+import {AuditService} from "./service/audit.service";
+import { AuditComponent } from './audit/audit.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { CharacterItemComponent } from './character-item/character-item.componen
     TabSerieComponent,
     TabStoryComponent,
     TabEventComponent,
-    CharacterItemComponent
+    CharacterItemComponent,
+    AuditComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,7 @@ import { CharacterItemComponent } from './character-item/character-item.componen
     ButtonModule,
     TableModule
   ],
-  providers: [MarvelService],
+  providers: [MarvelService, AuditService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
